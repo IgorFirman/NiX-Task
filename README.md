@@ -1,1 +1,2 @@
-# NiX-Task
+This project does not require any configuration to use. All you have to do is download the project folder to your computer, open the N-iX_Task.sln file and start testing.
+This application can work with any database contained in your local SQL server. Also, along with the project, the directory contains a script to create a database on which this application was tested.

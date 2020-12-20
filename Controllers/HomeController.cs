@@ -32,6 +32,11 @@ namespace N_iX_Task.Controllers
         {
             return View();
         }
+        
+        public IActionResult Examples()
+        {
+            return View();
+        }
 
         [HttpGet]
         public IActionResult GetResultFromQuery(ConnectionAttributes attributes)
