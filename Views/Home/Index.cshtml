@@ -1,0 +1,52 @@
+﻿
+@model ConnectionAttributes
+@{
+    ViewData["Title"] = "Connection page";
+}
+
+<div>
+    <center>
+        <h4 class="font-weight-light">Please log into your sql server to connect database</h4>
+    </center>
+</div>
+
+@using (Html.BeginForm("GetResultFromQuery", "Home", FormMethod.Get))
+{
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Datasource" class="control-label">Input name of your local sql-server</label>
+                <input asp-for="Datasource" placeholder="Data source" class="form-control" />
+                <span asp-validation-for="Datasource" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="DataBase" class="control-label">Input name of database</label>
+                <input asp-for="DataBase" placeholder="Database" class="form-control" />
+                <span asp-validation-for="DataBase" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row pt-2">
+            <div class="form-group col-md-6">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" placeholder="User name" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" placeholder="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row pt-5">
+            <div class="form-group">
+                <textarea asp-for="Query" rows="15" cols="120" placeholder="Input here your SQL code..."></textarea>
+            </div>
+            <div class="form-group pl-3 pt-1">
+                <input type="submit" value="Run query" class="btn btn-primary" name="queryString" formtarget="_blank" />
+            </div>
+        </div>
+
+    </form>
+}
+

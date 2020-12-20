@@ -1,0 +1,161 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.form {
+    width: 600px;
+    padding: 15px 32px 32px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    background: rgb(113, 214, 227);
+    z-index: 0;
+}
+
+.form__input,
+.form__button {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.form__title {
+    text-align: center;
+    margin: 0 0 25px 0;
+    font-weight: normal;
+    font-size: 26px;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    color: white;
+    z-index: -5;
+    transition: 0.3s;
+}
+
+.form__input {
+    width: 100%;
+    padding: 0 10px 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+    .form__input:focus {
+        border-bottom: 1px solid #1a73a8
+    }
+
+.form__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #22e07b;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .form__button:focus,
+    .form__button:hover {
+        background-color: #3dff98;
+    }
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+    top: -18px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #d3eaed;
+}
+
+#div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    position: absolute;
+    width: -moz-available;
+}
+
+.title_size {
+    font-size: 30pt;
+}
+

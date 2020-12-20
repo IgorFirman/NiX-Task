@@ -1,0 +1,15 @@
+﻿@model Exception
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="text-center pt-5">
+    <h2 class="font-weight text-danger text-center">Something went wrong!</h2>
+
+    <p class="pt-5">Exception:</p>
+    <p class="text-warning font-weight-light pt-1">@Model.Message.ToLower()</p>
+
+    <a class="pt-5" asp-controller="Home" asp-action="Index">Home page</a>
+</div>

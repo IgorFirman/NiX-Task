@@ -1,0 +1,40 @@
+﻿@model String
+
+
+<link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+<link rel="stylesheet" href="https://codemirror.net/addon/hint/show-hint.css">
+
+<script src="https://codemirror.net/lib/codemirror.js"></script>
+<script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+<script src="https://codemirror.net/addon/edit/continuecomment.js"></script>
+<script src="https://codemirror.net/mode/sql/sql.js"></script>
+<script src="https://codemirror.net/addon/hint/show-hint.js"></script>
+<script src="https://codemirror.net/addon/hint/sql-hint.js"></script>
+
+<p>The query bellow was executed</p>
+
+<textarea rows="4" cols="40" name="codesnippet_editable" id="codesnippet_editable">@Model</textarea>
+
+
+<script>
+    window.onload = function () {
+
+        var editableCodeMirror = CodeMirror.fromTextArea(document.getElementById('codesnippet_editable'), {
+            mode: "text/x-mysql",
+            lineNumbers: true,
+            indentWithTabs: true,
+            smartIndent: true,
+            lineNumbers: true,
+            matchBrackets: true,
+            autofocus: true,
+            extraKeys: { "Ctrl-Space": "autocomplete" },
+            hintOptions: {
+                tables: {
+                    users: { name: null, score: null, birthDate: null },
+                    countries: { name: null, population: null, size: null }
+                }
+            }
+        });
+
+    };
+</script>

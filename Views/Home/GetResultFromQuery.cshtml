@@ -1,0 +1,27 @@
+﻿@model IEnumerable<object>
+
+    <link rel="stylesheet" href="~/Content/site.css" />
+<div>
+    <center>
+        <h4 class="pb-4 font-weight-light">Your query was executed. Your results: </h4>
+</center>
+</div>
+
+<table class="table table-striped">
+    @for(int i = ViewBag.FieldsCount; i < Model.Count(); i+=ViewBag.FieldsCount)
+    {
+        <tr>
+            @for(int column = i - ViewBag.FieldsCount; column < i; column++)
+            {
+                if (column < ViewBag.FieldsCount)
+                {
+                    <th>@Model.ElementAt(column)</th>
+                }
+                else
+                {
+                    <td>@Model.ElementAt(column)</td>
+                }
+            }
+        </tr>
+    }
+</table>
